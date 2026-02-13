@@ -1,16 +1,38 @@
-# React + Vite
+Aplicación Fullstack que permite sumar dos números mediante una interfaz web.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+El proyecto está compuesto por:
 
-Currently, two official plugins are available:
+- Backend desarrollado con Symfony (API REST)
+- Frontend desarrollado con React
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+El usuario ingresa dos números en la interfaz y el sistema envía la información al backend, el cual realiza la operación y devuelve el resultado.
 
-## React Compiler
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+# Requisitos
 
-## Expanding the ESLint configuration
+Para ejecutar el proyecto se necesita:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- PHP 8.1+
+- Composer
+- Node.js 18+
+- npm
+
+---
+
+# Ejecución del Proyecto
+
+El sistema está dividido en dos aplicaciones que deben ejecutarse simultáneamente.
+
+### Backend
+Desde la carpeta `ilnia-api-test` ejecutar desde la consola:
+
+composer install
+php bin/console cache:clear
+php -S 127.0.0.1:8000 -t public
+
+### FrontEnd
+Desde la carpeta `ilnia-client-test` ejecutar desde la consola:
+
+npm install
+npm run dev
+Abrir http://localhost:5173 y puedes probarlo
